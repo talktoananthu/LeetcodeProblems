@@ -6,27 +6,20 @@ public:
           if(nums.size()==1){
             return nums[0];
           }
-          int i=0;
-          int j =0;
-          int count=0;
-          while(j<nums.size()){
-
-             if(nums[j]==nums[i]){
-                count++;
-             }
-             if(nums[j]!=nums[i] ){
-               
-                 if(count<=sizetarget){
-                   i= j;
-                count=1;
-                 }
-                 
-
-             }
-
-             j++;
+          int frequency = 0;
+          int candidateKey =0;
+          for(int i=0;i<nums.size();i++){
+            if(frequency ==0){
+                candidateKey = nums[i];
+            }
+            if(candidateKey ==nums[i]){
+                frequency++;
+            }
+            else{
+                 frequency--;
+            }
           }
-            return nums[i];
-        
-    }
-};
+          return candidateKey;
+}
+}
+;
