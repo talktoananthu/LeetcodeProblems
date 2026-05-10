@@ -2,7 +2,7 @@ class Solution {
 public:
     int majorityElement(vector<int>& nums) {
         int sizetarget = nums.size()/2;
-          sort(nums.begin(),nums.end());
+    
           if(nums.size()==1){
             return nums[0];
           }
